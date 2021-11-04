@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: jot
+# uuid: 7cfef18f-7936-365f-0cf3-8457ea168d9c
+# key: jot
+# condition: t
+# --
+cout << ${1:$$(replace-regexp-in-string "[\t ]*,[\t ]*" " << ' ' << " yas-text)} << "\n";

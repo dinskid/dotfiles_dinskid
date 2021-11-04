@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: jin
+# uuid: e459fc26-5d49-3b8b-9b56-1568fe6d0b5f
+# key: jin
+# condition: t
+# --
+
+cin >> ${1:$$(replace-regexp-in-string "[\t ]*,[\t ]*" " >> " yas-text)};

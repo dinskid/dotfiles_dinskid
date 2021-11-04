@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: vin
+# uuid: 18b9d346-4bc4-3cd2-fcde-d4fc6b6d8380
+# key: vin
+# condition: t
+# --
+$1.begin(), $1.end()$2

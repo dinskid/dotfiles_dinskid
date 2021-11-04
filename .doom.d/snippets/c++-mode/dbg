@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: dbg
+# uuid: ea64c699-6d36-3136-868e-6d97665ed921
+# key: /dbg
+# condition: t
+# --
+#ifdef LOCAL
+#include "dinskid/debug.h"
+#define dbg(...) cout << "[" << #__VA_ARGS__ << "]:", deb(__VA_ARGS__)
+#else
+#define dbg(...)
+#endif

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: debv
+# uuid: e98db5b5-8714-334b-5d7e-c74367a10868
+# key: /debv
+# condition: t
+# --
+for (auto x : $0) cout << x << " ";
