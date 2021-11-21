@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod3
+set $mod Mod4
 set $sup Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -29,14 +29,16 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+# exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86MonBrightnessUp exec light -A 1 && $refresh_i3status # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 1 && $refresh_i3status # increase screen brightness
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -181,8 +183,12 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         position top
-        status_command i3status
-	# status_command i3status | python3 -u /home/dinskid/files/code/i3bar/test.py 2> ~/.i3bar.out
+        # status_command i3status
+        status_command /usr/bin/bumblebee-status \
+                -m nic cpu memory battery brightness date time amixer \
+                -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" \
+                brightness.use_acpi="false" brightness.step=1 \
+                -t dracula-powerline
 	font xft:Sans 10
 }
 
@@ -208,8 +214,12 @@ for_window [class="(?i)*nextcloud*"] floating disable
 for_window [class="plasmashell" window_type="notification"] floating enable, border none, move position 1450px 20px
 no_focus [class="plasmashell" window_type="notification"] 
 
+exec --no-startup-id nm-applet --sm-disable
+exec --no-startup-id dunst
+exec --no-startup-id xfce4-power-manager
+exec --no-startup-id flameshot
 exec_always --no-startup-id picom -bc
-exec_always feh --bg-fill ~/.config/dinskid/bgs/bg.png
+exec_always --no-startup-id feh --bg-fill ~/.config/dotfiles_dinskid/bgs/bg.png
 
 hide_edge_borders both
 for_window [class="^.*"] border pixel 3
@@ -220,22 +230,18 @@ smart_gaps on
 
 # client.focused #ff0000 #ff0000 #ff0000 #ff0000 #ff0000
 
-set $mode_launcher Launch: [c]hrome [v]isual-studio-code-bin [d]iscord
-bindsym $mod+o mode "$mode_launcher"
+# set $mode_launcher Launch: [c]hrome [v]isual-studio-code-bin [d]iscord
+# bindsym $mod+o mode "$mode_launcher"
 
-mode "$mode_launcher" {
-        bindsym c exec google-chrome-stable
-        bindsym v exec code
-        bindsym d exec discord
-        bindsym Escape mode "default"
-        bindsym Return mode "default"
-}
+# mode "$mode_launcher" {
+#         bindsym c exec google-chrome-stable
+#         bindsym v exec code
+#         bindsym d exec discord
+#         bindsym Escape mode "default"
+#         bindsym Return mode "default"
+# }
 
-# default_border pixel 3
-# hide_edge_borders smart
-
-exec --no-startup-id google-chrome-stable
-assign [class="(?i)discord"] workspace number 7
+assign [class="(?i)discord"] $ws7
 assign [class="(?i)xournal"] $ws8
 assign [class="(?i)brave"] $ws10
 for_window [class="(?)brave"] move to workspace $ws10
@@ -244,4 +250,9 @@ for_window [urgent="latest"] focus
 bindsym $sup+Tab workspace next
 bindsym $sup+Shift+Tab workspace prev
 
-bindsym $mod+p exec --no-startup-id emacsclient -c
+bindsym $mod+p exec --no-startup-id emacsclient -c -a 'nvim'
+bindsym $mod+Shift+t exec --no-startup-id poweroff
+exec i3-sensible-terminal
+
+bindsym Print exec flameshot gui
+
