@@ -139,5 +139,9 @@
       :desc "Open like spacemacs" "SPC" #'counsel-M-x)
 
 (setq-hook! 'cpp-mode-hook
-  cpp-basic-offset 2
+  c-basic-offset 2
+  tab-width 2)
+
+(setq-hook! 'python-mode-hook
+  python-basic-offset 2
   tab-width 2)
