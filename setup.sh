@@ -2,7 +2,7 @@
 
 # install
 pacman -Syyu
-pacman -S git make gcc g++ nvim emacs
+pacman -S git make gcc g++ nvim
 
 # setup links
 ln -s nvim
