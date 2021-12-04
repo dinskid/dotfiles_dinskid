@@ -22,3 +22,7 @@ gocp() {
   cd $HOME/cp/contest/$1
 }
 
+cptxt() {
+  xclip -sel clipboard -i $1
+}
+

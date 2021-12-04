@@ -213,7 +213,7 @@ for_window [title="win7"] floating enable; border none
 # for_window [class="Plasmoidviewer"] floating enable; border none
 # for_window [class="(?i)*nextcloud*"] floating disable
 # for_window [class="plasmashell" window_type="notification"] floating enable, border none, move position 1450px 20px
-# no_focus [class="plasmashell" window_type="notification"] 
+# no_focus [class="plasmashell" window_type="notification"]
 
 exec --no-startup-id ulauncher --hide-window
 exec --no-startup-id nm-applet --sm-disable
@@ -238,7 +238,8 @@ for_window [urgent="latest"] focus
 bindsym $sup+Tab workspace next
 bindsym $sup+Shift+Tab workspace prev
 
-bindsym $mod+p exec --no-startup-id emacsclient -c -a 'nvim'
+# bindsym $mod+p exec --no-startup-id emacsclient -c -a 'nvim'
+bindsym $mod+p exec --no-startup-id gnvim
 bindsym $mod+Shift+t exec --no-startup-id poweroff
 exec i3-sensible-terminal
 
