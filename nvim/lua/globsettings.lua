@@ -22,6 +22,7 @@ utils.opt('o', 'guifont', 'Fira Code:h11')
 utils.opt('o', 'termguicolors', true)
 utils.opt('o', 'mouse', 'a')
 utils.opt('o', 'wrap', false)
+utils.opt('o', 'signcolumn', 'no')
 
 cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'
 cmd 'colorscheme OceanicNext'

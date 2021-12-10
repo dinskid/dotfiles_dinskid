@@ -187,7 +187,7 @@ bar {
         position top
         status_command bumblebee-status \
  	    -m nic cpu memory battery brightness date time amixer \
- 	    -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" \
+ 	    -p root.path=/ time.format="%H:%M" date.format="%a, %b %d %Y" \
  	    brightness.use_acpi="false" brightness.step=1 \
  	    -t dracula-powerline
 	font xft:Sans 10

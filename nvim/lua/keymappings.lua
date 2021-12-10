@@ -21,5 +21,5 @@ utils.map('n', '<leader>ll', '<C-w>l')
 utils.map('n', '<leader>ff', '<cmd>:Telescope zoxide list<cr>')
 
 utils.map('n', '<leader>;', ':cd $HOME/.config/nvim/<CR> :e $MYVIMRC<CR>')
-utils.map('n', '<leader><CR>', ':lcd %:p:h')
+utils.map('n', '<leader><CR>', ':lcd %:p:h<cr>')
 
