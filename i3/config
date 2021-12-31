@@ -238,8 +238,8 @@ for_window [urgent="latest"] focus
 bindsym $sup+Tab workspace next
 bindsym $sup+Shift+Tab workspace prev
 
-# bindsym $mod+p exec --no-startup-id emacsclient -c -a 'nvim'
-bindsym $mod+p exec --no-startup-id gnvim
+bindsym $mod+o exec --no-startup-id emacsclient -c -a 'nvim'
+bindsym $mod+p exec --no-startup-id kitty sh -c 'nvim && exit'
 bindsym $mod+Shift+t exec --no-startup-id poweroff
 exec i3-sensible-terminal
 

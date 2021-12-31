@@ -2,6 +2,10 @@
 
 export EDITOR=nvim
 
+alias e=nvim
+alias vim=nvim
+alias vi=nvim
+
 fix() {
   $HOME/run.sh
 }

@@ -46,8 +46,8 @@ function takeinput(succ, fail)
     onsucc = onsucc .. string.format(':lua %s()<CR>', succ)
   end
 
-  local onfail = ':q<CR>'
-  if succ ~= nil then
+  local onfail = ':q!<CR>'
+  if fail ~= nil then
     onfail = onfail .. string.format(':lua %s()<CR>', fail)
   end
 
