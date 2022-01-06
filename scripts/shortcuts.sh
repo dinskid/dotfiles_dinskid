@@ -15,7 +15,7 @@ remacs() {
 }
 
 vsc() {
-  code $1 . && exit
+  $EDITOR $1 .
 }
 
 gorand() {

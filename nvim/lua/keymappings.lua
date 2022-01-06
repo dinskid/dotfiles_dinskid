@@ -2,7 +2,7 @@ local utils = require('utils')
 
 utils.map('n', '<C-l>', '<cmd>noh<CR>') -- Clear highlights
 utils.map('n', '<leader>.', '<cmd>lua require("telescope.builtin").find_files{ file_ignore_patterns = { "node_modules", ".git" }}<cr>')
-utils.map('n', '<leader>p', '<cmd>Telescope file_browser<cr>')
+utils.map('n', '<leader>p', '<cmd>lua require("telescope").extensions.file_browser.file_browser()<cr>')
 utils.map('n', '<leader>Tg', '<cmd>Telescope live_grep<cr>')
 utils.map('n', '<leader>,', '<cmd>Telescope buffers<cr>')
 utils.map('n', '<leader>Th', '<cmd>Telescope help_tags<cr>')

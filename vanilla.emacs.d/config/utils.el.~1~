@@ -1,0 +1,3 @@
+(defun open-config ()
+  (interactive)
+  (cd "~/.emacs.d"))

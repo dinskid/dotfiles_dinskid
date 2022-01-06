@@ -17,11 +17,12 @@ return require('packer').startup(function()
   }
   use 'nvim-telescope/telescope-media-files.nvim'
   use 'nvim-telescope/telescope-project.nvim'
+  use { 'nvim-telescope/telescope-file-browser.nvim' }
+  use 'jvgrootveld/telescope-zoxide'
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
-  use 'jvgrootveld/telescope-zoxide'
   use {
     'neovim/nvim-lspconfig',
     'williamboman/nvim-lsp-installer',
@@ -47,12 +48,13 @@ return require('packer').startup(function()
     config = function() require('nvim-autopairs').setup({ disable_filetype = { "TelescopePrompt" , "vim" } }) end
   }
   use 'preservim/nerdtree'
-  use {
-    'goolord/alpha-nvim',
-    config = function ()
-      require'alpha'.setup(require'alpha.themes.dashboard'.opts)
-    end
-  }
+  -- use {
+  --   'goolord/alpha-nvim',
+  --   config = function ()
+  --     require'alpha'.setup(require'alpha.themes.dashboard'.opts)
+  --   end
+  -- }
+  use 'mhinz/vim-startify'
   use 'tpope/vim-surround'
   use {
     'numToStr/Comment.nvim', 
