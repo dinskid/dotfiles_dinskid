@@ -15,7 +15,7 @@ remacs() {
 }
 
 vsc() {
-  $EDITOR $1 .
+  (gnvim $1 . &)
 }
 
 gorand() {

@@ -241,7 +241,7 @@ bindsym $sup+Shift+Tab workspace prev
 bindsym $mod+o exec --no-startup-id emacsclient -c -a 'nvim'
 bindsym $mod+p exec --no-startup-id kitty sh -c 'nvim && exit'
 bindsym $mod+Shift+t exec --no-startup-id poweroff
-exec i3-sensible-terminal
+# exec i3-sensible-terminal
 
 bindsym Print exec flameshot gui
 

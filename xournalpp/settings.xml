@@ -166,6 +166,10 @@
       <attribute name="deviceClass" type="int" value="2"/>
       <attribute name="deviceSource" type="int" value="1"/>
     </data>
+    <data name="MOSART Semi. MI Mouse A1w Mouse">
+      <attribute name="deviceClass" type="int" value="1"/>
+      <attribute name="deviceSource" type="int" value="0"/>
+    </data>
   </data>
   <data name="tools">
     <attribute name="current" type="string" value="pen"/>
