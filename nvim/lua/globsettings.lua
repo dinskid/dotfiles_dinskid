@@ -29,7 +29,6 @@ utils.opt('o', 'foldmethod', 'marker')
 cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'
 cmd 'colorscheme OceanicNext'
 cmd 'tnoremap <Esc> <C-\\><C-n>'
-cmd 'let g:vsnip_snippet_dir = "~/.config/nvim/snippets/snippets"'
 
 cmd 'autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()'
 

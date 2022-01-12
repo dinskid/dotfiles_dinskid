@@ -33,8 +33,8 @@ return require('packer').startup(function()
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
   use 'ray-x/lsp_signature.nvim'
-  use 'hrsh7th/cmp-vsnip'
-  use 'hrsh7th/vim-vsnip'
+  use 'L3MON4D3/LuaSnip'  
+  use 'saadparwaiz1/cmp_luasnip'
   use {
     'TimUntersberger/neogit',
     requires = 'nvim-lua/plenary.nvim'

@@ -75,6 +75,11 @@ _G.packer_plugins = {
     path = "/home/dinskid/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
+  LuaSnip = {
+    loaded = true,
+    path = "/home/dinskid/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/dinskid/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -95,10 +100,10 @@ _G.packer_plugins = {
     path = "/home/dinskid/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
-  ["cmp-vsnip"] = {
+  cmp_luasnip = {
     loaded = true,
-    path = "/home/dinskid/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
-    url = "https://github.com/hrsh7th/cmp-vsnip"
+    path = "/home/dinskid/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["indent-blankline.nvim"] = {
     cond = { "\27LJ\1\2A\0\0\1\0\4\0\t4\0\0\0007\0\1\0007\0\2\0\6\0\3\0T\0\2€)\0\1\0T\1\1€)\0\2\0H\0\2\0\nalpha\rfiletype\abo\bvim\0" },
@@ -230,11 +235,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dinskid/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
-  },
-  ["vim-vsnip"] = {
-    loaded = true,
-    path = "/home/dinskid/.local/share/nvim/site/pack/packer/start/vim-vsnip",
-    url = "https://github.com/hrsh7th/vim-vsnip"
   },
   vimtex = {
     loaded = true,
