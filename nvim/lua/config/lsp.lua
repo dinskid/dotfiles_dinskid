@@ -110,7 +110,6 @@ end
 
 local lsp_installer = require('nvim-lsp-installer')
 lsp_installer.on_server_ready(function (server)
-  -- print(vim.inspect(server))
   server:setup {
     on_attach = on_attach,
     capabilities = capabilities,

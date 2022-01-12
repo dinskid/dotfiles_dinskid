@@ -25,3 +25,7 @@ utils.map('n', '<leader>f', '<cmd>:Telescope zoxide list<cr>')
 utils.map('n', '<leader>;', ':cd $HOME/.config/nvim/<CR> :e $MYVIMRC<CR>')
 utils.map('n', '<leader><CR>', ':lcd %:p:h<cr>')
 
+utils.map("x", "J", ":move '>+1<CR>gv-gv")
+utils.map("x", "K", ":move '<-2<CR>gv-gv")
+utils.map("x", "<A-j>", ":move '>+1<CR>gv-gv")
+utils.map("x", "<A-k>", ":move '<-2<CR>gv-gv")
