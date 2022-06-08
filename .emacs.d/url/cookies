@@ -1,0 +1,14 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ 'nil)
+(setq url-cookie-secure-storage
+ '(("leetcode.com"
+  [url-cookie "csrftoken" "rceePwHp7NMydL7N6KUg0hIgkj3QN0eiHLA8oT4VFIg5vFJVdRvMMXbcpgRrVRMp" "Wed May 17 14:08:04 2023 GMT" "/" "leetcode.com" t]))
+)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:

@@ -48,17 +48,18 @@ return require('packer').startup(function()
     config = function() require('nvim-autopairs').setup({ disable_filetype = { "TelescopePrompt" , "vim" } }) end
   }
   use 'preservim/nerdtree'
-  -- use {
-  --   'goolord/alpha-nvim',
-  --   config = function ()
-  --     require'alpha'.setup(require'alpha.themes.dashboard'.opts)
-  --   end
-  -- }
   use 'mhinz/vim-startify'
   use 'tpope/vim-surround'
+  use 'tpope/vim-repeat'
+  -- use {
+    -- 'numToStr/Comment.nvim'
+  -- }
   use {
-    'numToStr/Comment.nvim', 
-    config = function() require('Comment').setup() end
+      'numToStr/Comment.nvim',
+      tag = 'v0.6',
+      config = function()
+          require('Comment').setup()
+      end
   }
   use {
     'lukas-reineke/indent-blankline.nvim',
@@ -66,16 +67,23 @@ return require('packer').startup(function()
     config = function() require('indent_blankline').setup({ show_current_context = true, show_current_context_start = true }) end
   }
   use 'voldikss/vim-floaterm'
-  -- use 'sbdchd/neoformat'
+  use 'numToStr/FTerm.nvim'
+  use {
+    'akinsho/toggleterm.nvim',
+    config = function() require'toggleterm'.setup({
+      shade_terminals = true, 
+      open_mapping = [[<c-\>]],
+    })
+  end
+  }
   use 'lervag/vimtex' -- LaTeX
   use 'folke/zen-mode.nvim'
   use 'mhartington/oceanic-next'
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true},
-  }
+  use 'nvim-lualine/lualine.nvim'
   use 'jbyuki/instant.nvim'
-
+  use 'svermeulen/vim-cutlass'
+  use 'mg979/vim-visual-multi'
+  use 'glacambre/firenvim'
 
   -- use '~/smortcd'
 end)

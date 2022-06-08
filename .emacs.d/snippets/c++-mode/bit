@@ -1,0 +1,28 @@
+# -*- mode: snippet -*-
+# name: libBIT
+# key: libBIT
+# --
+struct BIT { // WARN: This uses 1-based indexing
+  int n;
+  vector<int> t;
+  BIT(int _n) {
+    n = _n; // bit 1 based implementation
+    t = vector<int>(n + 1);
+  }
+
+  void add(int i, int x) {
+    while (i <= n) {
+      t[i] += x;
+      i += (i & -i);
+    }
+  }
+
+  int get(int i) {
+    int sum = 0;
+    while (i > 0) {
+      sum += t[i];
+      i -= (i & -i);
+    }
+    return sum;
+  }
+};

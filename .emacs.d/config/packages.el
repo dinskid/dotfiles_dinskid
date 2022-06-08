@@ -1,123 +1,86 @@
-(require 'package)
-(setq package-archives '(("melpa" . "https://melpa.org/packages/")
-                         ("org" . "https://orgmode.org/elpa/")
-                         ("elpa" . "https://elpa.gnu.org/packages/")))
-(package-initialize)
-(unless package-archive-contents
-  (package-refresh-contents))
-(unless (package-installed-p 'use-package)
-  (package-install 'use-package))
 (require 'use-package)
-(setq use-package-always-ensure t)
-(defvar bootstrap-version)
-(let ((bootstrap-file
-       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
-      (bootstrap-version 5))
-  (unless (file-exists-p bootstrap-file)
-    (with-current-buffer
-        (url-retrieve-synchronously
-         "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
-         'silent 'inhibit-cookies)
-      (goto-char (point-max))
-      (eval-print-last-sexp)))
-  (load bootstrap-file nil 'nomessage))
-(setq package-enable-at-startup nil)
-(straight-use-package 'use-package)
-
-;; system
-(use-package exec-path-from-shell
-  :straight t
-  :config
-  (exec-path-from-shell-initialize))
-
-(use-package posframe
-  :straight t)
 
 (use-package evil
-  :straight t
   :ensure t
   :init
-  (setq evil-want-integration t)
   (setq evil-want-keybinding nil)
+  (setq evil-want-Y-yank-to-eol t)
+  (defalias #'forward-evil-word #'forward-evil-symbol)
   :config
+  (evil-set-undo-system 'undo-redo)
   (evil-mode 1))
-(use-package undo-tree
-  :straight t
-  :config
-  (global-undo-tree-mode)
-  (evil-set-undo-system 'undo-tree))
 (use-package evil-collection
-  :straight t
   :after evil
   :ensure t
   :config
   (evil-collection-init))
 (use-package evil-surround
-  :straight t
   :ensure t
+  :defer 1
+  :after evil-collection
   :config
+  (load-file (concat user-emacs-directory "./config/evil-cutlass.el"))
+  (setq evil-surround-operator-alist
+	'((evil-nc-change . change)
+	  (evil-destroy . delete)))
   (global-evil-surround-mode 1))
-(use-package evil-commentary
-  :straight t
+(use-package evil-leader
   :after evil
+  :ensure t
+  :after evil)
+(use-package evil-commentary
+  :defer 5
   :ensure t
   :config
   (evil-commentary-mode))
 
-(use-package vertico
-  :straight t
+(use-package lsp-mode
+  :ensure t
+  :defer 5
   :init
-  (setq vertico-count most-positive-fixnum)
-  (vertico-mode)
-  (setq read-file-name-completion-ignore-case t
-	read-buffer-completion-ignore-case t
-	completion-ignore-case t))
-
-(use-package vertico-posframe
-  :straight t
+  (setq lsp-keymap-prefix "C-c l")
+  :hook
+  (c++-mode . lsp-deferred)
+  (js-mode . lsp-deferred)
+  (rust-mode . lsp-deferred)
+  :commands (lsp lsp-deferred)
   :config
-  (vertico-posframe-mode 1))
+  (setq lsp-rust-server 'rust-analyzer
+	lsp-rust-analyzer-server-display-inlay-hints t))
 
 (use-package orderless
-  :straight t
-  :init
-  (setq completion-styles '(basic substring partial-completion flex)
-        completion-category-defaults nil
-        completion-category-overrides '((file (styles partial-completion)))))
-
-(use-package lsp-mode
-  :straight t
-  :init
-  ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
-  (setq lsp-keymap-prefix "C-c l")
-  :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
-         ;;(rust-mode . lsp-deferred)
-	 ;; :commands (lsp lsp-deferred)
-         (js-mode . lsp-deferred)
-         (python-mode . lsp-deferred)
-         (rust-mode . lsp-deferred)
-         (c-mode . lsp-deferred)
-         (c++-mode . lsp-deferred))
-  :commands (lsp lsp-deferred))
-(use-package lsp-ui
-  :straight t)
+  :after selectrum
+  :ensure t
+  :custom
+  (completion-styles '(orderless basic))
+  (completion-category-overrides '((file (styles basic partial-completion)))))
+(use-package prescient
+  :after selectrum
+  :ensure t)
+(use-package selectrum-prescient
+  :after (selectrum prescient)
+  :ensure t)
+(use-package selectrum
+  :ensure t
+  :config
+  (setq selectrum-prescient-enable-filtering nil)
+  (selectrum-prescient-mode +1)
+  (prescient-persist-mode +1)
+  (selectrum-mode))
 
 (use-package company
-  :straight t)
-
-(use-package vterm
-  :straight t
+  :ensure t
+  :defer 1
   :config
-  (setq vterm-kill-buffer-on-exit 1))
+  (company-tng-mode))
 
-(use-package yasnippet
-  :straight t)
-
-(use-package format-all
-  :straight t)
+(use-package zoxide
+  :defer 4
+  :ensure t)
 
 (use-package general
-  :straight t
+  :after evil
+  :ensure t
   :config
   (general-evil-setup t)
   (general-create-definer rune/leader-keys
@@ -125,28 +88,102 @@
     :prefix "SPC"
     :global-prefix "C-SPC"))
 
+(use-package vterm
+  :defer 5
+  :ensure t
+  :config
+  (setq-default vterm-clear-scrollback-when-clearing t)
+  (evil-collection-define-key 'insert 'vterm-mode-map
+    (kbd "C-S-v") 'vterm-yank))
+(use-package vterm-toggle
+  :ensure t
+  :after vterm
+  :config
+  (setq vterm-toggle-fullscreen-p nil)
+  (add-to-list 'display-buffer-alist
+	       '((lambda(bufname _) (with-current-buffer bufname
+				      (or (equal major-mode 'vterm-mode)
+					  (string-prefix-p vterm-buffer-name bufname))))
+		 (display-buffer-reuse-window display-buffer-at-bottom)
+		 (reusable-frames . visible)
+		 (window-height . 0.3))))
+
 (use-package projectile
-  :straight t)
+  :ensure t
+  :defer 3
+  :config
+  (projectile-mode 1))
 
-(use-package fzf
-  :straight t)
+(use-package yasnippet
+  :ensure t
+  :defer 5
+  :config
+  (require 'yasnippet)
+  (setq yas-snippet-dirs
+	'("~/.emacs.d/snippets"))
+  (yas-global-mode 1))
 
-;; visual elements
+(use-package esup
+  :defer t
+  :ensure t
+  ;; To use MELPA Stable use ":pin melpa-stable",
+  :pin melpa)
+
+(use-package magit
+  :defer t
+  :ensure t)
+
+(use-package dashboard
+  :ensure t
+  :config
+  (dashboard-setup-startup-hook))
+
+(use-package leetcode
+  :defer t
+  :ensure t
+  :config
+  (setq leetcode-path "~/cp/rand/lc/"
+	leetcode-language "c++"))
+
+;; language support
+;; lua mode
+
+(use-package lua-mode
+  :defer t
+  :ensure t)
+(use-package rustic
+  :defer t
+  :ensure t)
+
+;; org mode
+(use-package org-bullets
+  :ensure t
+  :after org
+  :hook (org-mode . org-bullets-mode))
+(use-package evil-org
+  :ensure t
+  :after org
+  :hook (org-mode . (lambda () evil-org-mode))
+  :config
+  (require 'evil-org-agenda)
+  (evil-org-agenda-set-keys))
+
+;; ui
 (use-package vscode-dark-plus-theme
-  :straight t
   :ensure t
   :config
   (load-theme 'vscode-dark-plus t))
-
-(use-package doom-modeline
-  :straight t
+(use-package mood-line
   :ensure t
-  :hook (after-init . doom-modeline-mode))
-
-(use-package all-the-icons
-  :straight t
-  :if (display-graphic-p))
-
-;; lang
-(use-package rust-mode
-  :straight t)
+  :config
+  (mood-line-mode))
+(use-package hl-todo
+  :ensure t
+  :defer 10
+  :config
+ (setq hl-todo-keyword-faces
+	'(("TODO"   . "#FF0000")
+	  ("WARN"   . "#FFA033")
+	  ("FIXME"  . "#FF0000")
+	  ("DEBUG"  . "#A020F0")))
+  (global-hl-todo-mode))

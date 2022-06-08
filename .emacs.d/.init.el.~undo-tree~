@@ -1,0 +1,173 @@
+(undo-tree-save-format-version . 1)
+"ba227da2f19344b8e478548db92dbf76669176b6"
+[nil nil nil nil (25213 20218 200681 99000) 0 nil]
+([nil nil ((1269 . 1508) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -1269) (1266 . 1268) (#("
+" 0 1 (fontified nil)) . -1266) (1068 . 1267) (#(" " 0 1 (fontified nil)) . 1068) (795 . 1069) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(dashboard magit dracula-theme esup company yasnippet projectile vterm-toggle vterm zoxide use-package sublimity selectrum orderless oceanic-theme lsp-mode general evil-goggles evil-collection)))" 0 473 (fontified nil)) . -795) (t 25213 18770 79847 899000)) nil (25213 20218 200674 641000) 0 nil])
+([nil nil ((1285 . 1524) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -1285) (1282 . 1284) (#("
+" 0 1 (fontified nil)) . -1282) (1068 . 1283) (#(" " 0 1 (fontified nil)) . 1068) (795 . 1069) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(dashboard magit dracula-theme esup company yasnippet projectile vterm-toggle vterm zoxide use-package sublimity selectrum orderless oceanic-theme lsp-mode general evil-goggles evil-collection)))" 0 473 (fontified nil)) . -795) (t 25213 20218 202319 817000)) nil (25213 20833 870499 504000) 0 nil])
+([nil nil ((1305 . 1544) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -1305) (1302 . 1304) (#("
+" 0 1 (fontified nil)) . -1302) (1068 . 1303) (#(" " 0 1 (fontified nil)) . 1068) (795 . 1069) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(evil-commentary dashboard magit dracula-theme esup company yasnippet projectile vterm-toggle vterm zoxide use-package sublimity selectrum orderless oceanic-theme lsp-mode general evil-goggles evil-collection)))" 0 489 (fontified nil)) . -795) (t 25213 20833 875318 917000)) nil (25213 21618 521947 873000) 0 nil])
+([nil nil ((1317 . 1556) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -1317) (1314 . 1316) (#("
+" 0 1 (fontified nil)) . -1314) (1068 . 1315) (#(" " 0 1 (fontified nil)) . 1068) (795 . 1069) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(evil-nerd-commenter evil-commentary dashboard magit dracula-theme esup company yasnippet projectile vterm-toggle vterm zoxide use-package sublimity selectrum orderless oceanic-theme lsp-mode general evil-goggles evil-collection)))" 0 509 (fontified nil)) . -795) (t 25213 21618 518784 139000)) nil (25213 21748 827149 956000) 0 nil])
+([nil nil ((1321 . 1560) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -1321) (1318 . 1320) (#("
+" 0 1 (fontified nil)) . -1318) (1068 . 1319) (#(" " 0 1 (fontified nil)) . 1068) (795 . 1069) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(evil-leader evil-nerd-commenter evil-commentary dashboard magit dracula-theme esup company yasnippet projectile vterm-toggle vterm zoxide use-package sublimity selectrum orderless oceanic-theme lsp-mode general evil-goggles evil-collection)))" 0 521 (fontified nil)) . -795) (t 25213 21748 819337 23000)) nil (25214 25596 773719 153000) 0 nil])
+([nil nil ((1329 . 1568) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -1329) (1326 . 1328) (#("
+" 0 1 (fontified nil)) . -1326) (1068 . 1327) (#(" " 0 1 (fontified nil)) . 1068) (795 . 1069) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(ivy evil-leader evil-nerd-commenter evil-commentary dashboard magit dracula-theme esup company yasnippet projectile vterm-toggle vterm zoxide use-package sublimity selectrum orderless oceanic-theme lsp-mode general evil-goggles evil-collection)))" 0 525 (fontified nil)) . -795) (t 25214 25596 771519 571000)) nil (25214 25601 228168 761000) 0 nil])
+([nil nil ((1343 . 1582) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -1343) (1340 . 1342) (#("
+" 0 1 (fontified nil)) . -1340) (1068 . 1341) (#(" " 0 1 (fontified nil)) . 1068) (795 . 1069) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(counsel ivy evil-leader evil-nerd-commenter evil-commentary dashboard magit dracula-theme esup company yasnippet projectile vterm-toggle vterm zoxide use-package sublimity selectrum orderless oceanic-theme lsp-mode general evil-goggles evil-collection)))" 0 533 (fontified nil)) . -795) (t 25214 25601 231525 197000)) nil (25215 10667 383605 494000) 0 nil])
+([nil nil ((1356 . 1595) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -1356) (1353 . 1355) (#("
+" 0 1 (fontified nil)) . -1353) (1068 . 1354) (#(" " 0 1 (fontified nil)) . 1068) (795 . 1069) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(ivy-prescient counsel ivy evil-leader evil-nerd-commenter evil-commentary dashboard magit dracula-theme esup company yasnippet projectile vterm-toggle vterm zoxide use-package sublimity selectrum orderless oceanic-theme lsp-mode general evil-goggles evil-collection)))" 0 547 (fontified nil)) . -795) (t 25215 10667 378883 395000)) nil (25215 10668 939920 906000) 0 nil])
+([nil nil ((1366 . 1605) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -1366) (1363 . 1365) (#("
+" 0 1 (fontified nil)) . -1363) (1068 . 1364) (#(" " 0 1 (fontified nil)) . 1068) (795 . 1069) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(ivy-posframe ivy-prescient counsel ivy evil-leader evil-nerd-commenter evil-commentary dashboard magit dracula-theme esup company yasnippet projectile vterm-toggle vterm zoxide use-package sublimity selectrum orderless oceanic-theme lsp-mode general evil-goggles evil-collection)))" 0 560 (fontified nil)) . -795) (t 25215 10668 938961 99000)) nil (25215 10704 916461 526000) 0 nil])
+([nil nil ((1366 . 1605) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -1366) (1363 . 1365) (#("
+" 0 1 (fontified nil)) . -1363) (1068 . 1364) (#(" " 0 1 (fontified nil)) . 1068) (795 . 1069) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(prescient ivy-posframe ivy-prescient counsel ivy evil-leader evil-nerd-commenter evil-commentary dashboard magit dracula-theme esup company yasnippet projectile vterm-toggle vterm zoxide use-package sublimity selectrum orderless oceanic-theme lsp-mode general evil-goggles evil-collection)))" 0 570 (fontified nil)) . -795) (t 25215 10704 910704 735000)) nil (25215 11469 980783 35000) 0 nil])
+([nil nil ((1371 . 1610) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -1371) (1368 . 1370) (#("
+" 0 1 (fontified nil)) . -1368) (1068 . 1369) (#(" " 0 1 (fontified nil)) . 1068) (795 . 1069) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(prescient ivy-posframe ivy-prescient counsel ivy evil-leader evil-nerd-commenter evil-commentary dashboard magit dracula-theme esup company yasnippet projectile vterm-toggle vterm zoxide use-package sublimity selectrum orderless oceanic-theme lsp-mode general evil-goggles evil-collection)))" 0 570 (fontified nil)) . -795) (t 25215 11469 984094 32000)) nil (25215 11804 804541 219000) 0 nil])
+([nil nil ((1371 . 1610) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -1371) (1368 . 1370) (#("
+" 0 1 (fontified nil)) . -1368) (1068 . 1369) (#(" " 0 1 (fontified nil)) . 1068) (795 . 1069) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(affe prescient ivy-posframe ivy-prescient counsel ivy evil-leader evil-nerd-commenter evil-commentary dashboard magit dracula-theme esup company yasnippet projectile vterm-toggle vterm zoxide use-package sublimity selectrum orderless oceanic-theme lsp-mode general evil-goggles evil-collection)))" 0 575 (fontified nil)) . -795) (t 25215 11804 800224 80000)) nil (25215 12738 895895 929000) 0 nil])
+([nil current ((1380 . 1619) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -1380) (1377 . 1379) (#("
+" 0 1 (fontified nil)) . -1377) (1068 . 1378) (#(" " 0 1 (fontified nil)) . 1068) (795 . 1069) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(affe prescient ivy-posframe ivy-prescient counsel ivy evil-leader evil-nerd-commenter evil-commentary dashboard magit dracula-theme esup company yasnippet projectile vterm-toggle vterm zoxide use-package sublimity selectrum orderless oceanic-theme lsp-mode general evil-goggles evil-collection)))" 0 575 (fontified nil)) . -795) (t 25215 12738 887110 86000)) nil (25215 47801 744362 751000) 0 nil])
+nil

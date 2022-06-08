@@ -11,6 +11,7 @@ utils.map('n', '<leader>y', '<cmd>:%y+<cr>')
 utils.map('n', '<leader>t', '<cmd>FloatermToggle<cr>')
 utils.map('n', '<leader>s', '<cmd>NERDTreeToggle<cr>')
 utils.map('n', '<C-n>', '<cmd>lua NewFile()<cr>')
+utils.map('n', '<F6>', '<cmd>lua compileSubmitRun()<cr>')
 utils.map('n', '<F5>', '<cmd>lua compileRun()<cr>')
 utils.map('n', '<F4>', '<cmd>lua full()<cr>')
 

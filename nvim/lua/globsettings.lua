@@ -9,7 +9,7 @@ utils.opt('b', 'smartindent', true)
 utils.opt('b', 'tabstop', indent)
 utils.opt('o', 'hidden', true)
 utils.opt('o', 'ignorecase', true)
-utils.opt('o', 'scrolloff', 4 )
+utils.opt('o', 'scrolloff', 4)
 utils.opt('o', 'shiftround', true)
 utils.opt('o', 'smartcase', true)
 utils.opt('o', 'splitbelow', true)
@@ -32,3 +32,5 @@ cmd 'tnoremap <Esc> <C-\\><C-n>'
 
 cmd 'autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()'
 
+cmd 'compiler javac'
+cmd 'se makeprg=javac\\ **/*.java'
