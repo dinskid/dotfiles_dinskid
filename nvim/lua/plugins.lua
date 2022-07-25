@@ -51,6 +51,8 @@ return require('packer').startup(function()
   use 'mhinz/vim-startify'
   use 'tpope/vim-surround'
   use 'tpope/vim-repeat'
+  use 'simrat39/rust-tools.nvim'
+  --
   -- use {
     -- 'numToStr/Comment.nvim'
   -- }
