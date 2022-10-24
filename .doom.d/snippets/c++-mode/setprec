@@ -1,7 +1,5 @@
 # -*- mode: snippet -*-
 # name: setprec
-# uuid: 61865297-a780-3aee-8e2c-8db06acd378f
-# key: /setprec
-# condition: t
+# key: setprec
 # --
-cout << fixed << setprecision($1:10);
+cout << fixed << setprecision($1)

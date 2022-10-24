@@ -1,7 +1,5 @@
 # -*- mode: snippet -*-
 # name: vi
-# uuid: abbd29ce-9ea7-318c-8e52-7a168961de63
 # key: vi
-# condition: t
 # --
-vector<int>
+vector<int> $0

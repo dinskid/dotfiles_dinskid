@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: forn
-# uuid:
-# key: forn
-# condition: t
-# --
-for (${1})

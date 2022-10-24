@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: rof
-# uuid:
-# key: rof
-# condition: t
-# --
-for (int $0 = $1; $0 >= $2; $0--)

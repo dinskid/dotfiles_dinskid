@@ -1,10 +1,7 @@
 # -*- mode: snippet -*-
 # name: oset
-# uuid: acb41c00-492c-3eae-d120-26a1567a6f87
-# key: /oset
-# condition: t
+# key: libOSET
 # --
-
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
 using namespace __gnu_pbds;

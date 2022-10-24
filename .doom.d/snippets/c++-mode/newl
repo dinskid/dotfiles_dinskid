@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: newl
-# uuid: ea245961-8da6-37f3-2b34-2f87ae81613f
-# key: /nl
-# condition: t
-# --
-cout << "\n";

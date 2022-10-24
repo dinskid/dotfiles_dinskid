@@ -1,7 +1,5 @@
 # -*- mode: snippet -*-
 # name: intll
-# uuid: b93960e8-b88e-3020-64e3-0240188de807
-# key: /itl
-# condition: t
+# key: intll
 # --
 #define int long long
