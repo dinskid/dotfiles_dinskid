@@ -6,7 +6,7 @@
   <property name="pressureMultiplier" value="0.54000000"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Portrait"/>
-  <property name="lastSavePath" value=""/>
+  <property name="lastSavePath" value="/home/dinskid"/>
   <property name="lastOpenPath" value="/home/dinskid/Downloads"/>
   <property name="lastImagePath" value=""/>
   <property name="edgePanSpeed" value="20.00000000"/>
@@ -173,6 +173,7 @@
       <attribute name="deviceSource" type="int" value="0"/>
     </data>
   </data>
+  <data name="lastUsedPageBgColor"/>
   <data name="tools">
     <attribute name="current" type="string" value="pen"/>
     <data name="drawArrow">
