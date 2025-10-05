@@ -191,7 +191,7 @@ bar {
  	#   -p root.path=/ time.format="%H:%M" date.format="%a, %b %d %Y" \
  	#   brightness.use_acpi="false" brightness.step=1 \
  	#   -t dracula-powerline
-      # font xft:Sans 10
+      font xft:Sans 11
 }
 
 # for_window [class=".*"] border pixel 0
@@ -218,7 +218,6 @@ for_window [title="win7"] floating enable; border none
 
 exec --no-startup-id nm-applet --sm-disable
 exec --no-startup-id blueman-applet
-exec_always --no-startup-id $HOME/.config/dotfiles_dinskid/i3/scripts/needed.sh
 exec_always --no-startup-id feh --bg-fill $HOME/.config/dotfiles_dinskid/bgs/bg.png
 exec_always --no-startup-id copyq
 
